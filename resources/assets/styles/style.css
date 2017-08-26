@@ -87,7 +87,7 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
 	background-color: #fff;
 	padding: 20px 30px;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .chat-message {
 	position: relative;
