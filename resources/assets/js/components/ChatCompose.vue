@@ -43,11 +43,12 @@
                 if(this.$store.getters.user_bool){
                     this.send(this.$store.getters.get_messages);
                 }
-                this.send(this.$store.getters.get_messages, this.elis_response);
+                this.send(this.$store.getters.get_messages);
                 this.chatValue = '';
             },
-            send(msg, sam) {
+            send(msg) {
                 this.commit_query();
+                let that = this;
                 $.ajax({
                     type: "POST",
                     url: this.base_url + "query?v=20150910",
@@ -59,12 +60,15 @@
                     data: JSON.stringify({ query: this.chatValue, lang: "en", sessionId: "somerandomthing" }),
                     success: function(data) {
                         let chata = msg;
-                         sam = {
+                         that.elis_response = {
                             id: chata.length + 1,
                             content:  data.result.fulfillment.speech,
                             fromElis: true,
                             type: 'message'
                         };
+
+                         that.commit_response();
+
                         if (typeof data.result.parameters.products !== 'undefined') {
                             this.type_of = 'products';
                             this.item = data.result.parameters.products;
@@ -83,7 +87,7 @@
                 this.$store.commit('add_chat_details', this.my_response);
             },
             commit_response() {
-                this.$store.commit('add_chat_details');
+                this.$store.commit('add_chat_details', this.elis_response);
             }
         },
         computed: {

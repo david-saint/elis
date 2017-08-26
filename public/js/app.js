@@ -52756,7 +52756,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -52813,11 +52813,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (this.$store.getters.user_bool) {
                 this.send(this.$store.getters.get_messages);
             }
-            this.send(this.$store.getters.get_messages, this.elis_response);
+            this.send(this.$store.getters.get_messages);
             this.chatValue = '';
         },
-        send: function send(msg, sam) {
+        send: function send(msg) {
             this.commit_query();
+            var that = this;
             $.ajax({
                 type: "POST",
                 url: this.base_url + "query?v=20150910",
@@ -52829,12 +52830,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 data: JSON.stringify({ query: this.chatValue, lang: "en", sessionId: "somerandomthing" }),
                 success: function success(data) {
                     var chata = msg;
-                    sam = {
+                    that.elis_response = {
                         id: chata.length + 1,
                         content: data.result.fulfillment.speech,
                         fromElis: true,
                         type: 'message'
                     };
+
+                    that.commit_response();
+
                     if (typeof data.result.parameters.products !== 'undefined') {
                         this.type_of = 'products';
                         this.item = data.result.parameters.products;
@@ -52853,7 +52857,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$store.commit('add_chat_details', this.my_response);
         },
         commit_response: function commit_response() {
-            this.$store.commit('add_chat_details');
+            this.$store.commit('add_chat_details', this.elis_response);
         }
     },
     computed: {
