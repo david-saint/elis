@@ -52756,7 +52756,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -52840,13 +52840,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     that.commit_response();
 
                     if (typeof data.result.parameters.products !== 'undefined') {
-                        this.type_of = 'products';
-                        this.item = data.result.parameters.products;
+                        that.type_of = 'products';
+                        that.item = data.result.parameters.products;
                     }
                     if (typeof data.result.parameters.business !== 'undefined') {
-                        this.type_of = 'business';
-                        this.item = data.result.parameters.business;
+                        that.type_of = 'business';
+                        that.item = data.result.parameters.business;
                     }
+                    that.commit_to_db();
                 },
                 error: function error() {
                     Materialize.toast('Sorry unable to connect with the server', 3000);
@@ -52858,6 +52859,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         commit_response: function commit_response() {
             this.$store.commit('add_chat_details', this.elis_response);
+        },
+        commit_to_db: function commit_to_db() {
+            axios.post('/search', {
+                search: this.my_response.content
+            });
         }
     },
     computed: {

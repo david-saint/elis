@@ -70,13 +70,14 @@
                          that.commit_response();
 
                         if (typeof data.result.parameters.products !== 'undefined') {
-                            this.type_of = 'products';
-                            this.item = data.result.parameters.products;
+                            that.type_of = 'products';
+                            that.item = data.result.parameters.products;
                         }
                         if (typeof data.result.parameters.business !== 'undefined') {
-                            this.type_of = 'business';
-                            this.item = data.result.parameters.business;
+                            that.type_of = 'business';
+                            that.item = data.result.parameters.business;
                         }
+                        that.commit_to_db();
                     },
                     error: function() {
                         Materialize.toast('Sorry unable to connect with the server', 3000);
@@ -88,6 +89,11 @@
             },
             commit_response() {
                 this.$store.commit('add_chat_details', this.elis_response);
+            },
+            commit_to_db() {
+                axios.post('/search',{
+                    search: this.my_response.content
+                });
             }
         },
         computed: {
