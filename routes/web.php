@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
+});
+
+Route::post('/get-auth', function (){
+    return response()->json(Auth::user());
 });

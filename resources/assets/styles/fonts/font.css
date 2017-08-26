@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Dosis-Regular';
+    src:url(Dosis/Dosis-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Dosis-Light';
+    src:url(Dosis/Dosis-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Dosis-ExtraLight';
+    src: url(Dosis/Dosis-ExtraLight.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Dosis-Bold';
+    src:url(Dosis/Dosis-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Dosis-Bold';
+    src:url(Dosis/Dosis-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Raleway-Thin';
+    src: url(Raleway/Raleway-Thin.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url(Raleway/Raleway-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Raleway-ExtraLight';
+    src: url(Raleway/Raleway-ExtraLight.ttf) format('truetype');
+}
