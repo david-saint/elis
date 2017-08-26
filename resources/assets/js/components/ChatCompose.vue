@@ -23,19 +23,75 @@
     export default {
         data() {
             return {
-                chatValue: ''
+                chatValue: '',
+                base_url: this.$store.getters.get_base_url,
+                access_token: this.$store.getters.get_access_token,
+                my_response: {},
+                elis_response: {},
+                type_of: '',
+                item: ''
             }
         },
         methods: {
             submit_query(){
+                this.my_response = {
+                    id: this.$store.getters.get_messages.length,
+                    content: this.chatValue,
+                    fromElis: false,
+                    type: 'message'
+                };
                 if(this.$store.getters.user_bool){
-                    return true;
+                    this.send(this.$store.getters.get_messages);
                 }
+                this.send(this.$store.getters.get_messages, this.elis_response);
+                this.chatValue = '';
+            },
+            send(msg, sam) {
+                this.commit_query();
+                $.ajax({
+                    type: "POST",
+                    url: this.base_url + "query?v=20150910",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    headers: {
+                        "Authorization": "Bearer " + this.access_token
+                    },
+                    data: JSON.stringify({ query: this.chatValue, lang: "en", sessionId: "somerandomthing" }),
+                    success: function(data) {
+                        let chata = msg;
+                         sam = {
+                            id: chata.length + 1,
+                            content:  data.result.fulfillment.speech,
+                            fromElis: true,
+                            type: 'message'
+                        };
+                        if (typeof data.result.parameters.products !== 'undefined') {
+                            this.type_of = 'products';
+                            this.item = data.result.parameters.products;
+                        }
+                        if (typeof data.result.parameters.business !== 'undefined') {
+                            this.type_of = 'business';
+                            this.item = data.result.parameters.business;
+                        }
+                    },
+                    error: function() {
+                        Materialize.toast('Sorry unable to connect with the server', 3000);
+                    }
+                });
+            },
+            commit_query() {
+                this.$store.commit('add_chat_details', this.my_response);
+            },
+            commit_response() {
+                this.$store.commit('add_chat_details');
             }
         },
         computed: {
             user() {
                 return this.$store.getters.user_bool;
+            },
+            chat_details() {
+                return this.$store.getters.get_messages;
             }
         }
     }

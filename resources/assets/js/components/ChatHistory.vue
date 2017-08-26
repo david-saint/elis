@@ -21,7 +21,7 @@
                 </p>
             </div>
 
-            <div v-else-if="message.type == 'message' && !message.fromElis" class="col chat-message-me animated bounceInUp">
+            <div v-else-if="message.type == 'message' && !message.fromElis" class="col chat-message-me right animated bounceInUp">
                 <p class="chat-message-text">
                     {{ message.content }}
                 </p>
@@ -81,6 +81,9 @@
                 </li>
             </ul>
         </div>
+
+
+
         <div v-if="user" class="chat-message row">
 
             <div v-if="message.type == 'message' && message.fromElis" class="col chat-message-e animated bounceInLeft">
