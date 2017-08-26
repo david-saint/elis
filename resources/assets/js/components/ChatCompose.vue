@@ -92,7 +92,8 @@
             },
             commit_to_db() {
                 axios.post('/search',{
-                    search: this.my_response.content
+                    search: this.my_response.content,
+                    item: this.item
                 });
             }
         },
