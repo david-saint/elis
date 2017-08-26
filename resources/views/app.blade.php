@@ -37,7 +37,7 @@
                             </div>
                             <div class="col s10">
                                 <div class="row">
-                                    Product name and is
+                                    Product name is building smart apps for the future!
                                 </div>
                                 <div class="row">
                                     <img src="img/2.jpg" class="responsive-img">

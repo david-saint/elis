@@ -23,6 +23,14 @@ class BusinessController extends Controller
 
     public function search()
     {
+        $item = $request->search;
+        
+        $message = Message::create([
+                'title' => 'Title',
+                'message' => 'Isdev',
+                'user_id' => 2
+           ]);
+        dd($item);
         $determiner = 'query';
         $item = Input::get ( 'search' );
         if($determiner == 'query') {
