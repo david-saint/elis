@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ai', function () {
+    return view('ai');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/registernow', 'HomeController@ggg')->name('reg');
+Route::post('/search', 'BusinessController@search')->name('search');

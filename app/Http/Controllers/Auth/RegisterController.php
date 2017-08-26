@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Business;
+use App\Message;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -52,6 +56,23 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
+    }
+
+     public function ggg(Request $request)
+    {
+      
+
+                $business = Businss::create([
+                    'name' => 'Isdev',
+                    'category' => 'Product',
+                    'description' => 'I am an entrepreneur involved in selling reat ideas to people.',
+                    'city' => 'Iyana Ipaja',
+                    'state' => 'Lagos',
+                    'country' => 'Nigeeria',
+                    'user_id' => Auth::user()->id
+               ]);
+                session()->flash('message', 'Done'); 
+                return redirect('/');
     }
 
     /**
