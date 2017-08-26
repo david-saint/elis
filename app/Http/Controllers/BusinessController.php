@@ -43,6 +43,12 @@ class BusinessController extends Controller
         }elseif($determiner == 'conversation'){
             
         }
+
+        $message = Message::create([
+                    'title' => 'Title',
+                    'message' => 'Isdev',
+                    'user_id' => 'Product'
+               ]);
     }
 
     /**
