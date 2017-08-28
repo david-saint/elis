@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import ChatCompose from './ChatCompose.vue'
+    let ChatCompose = require('./ChatCompose.vue');
     import ChatHistory from './ChatHistory.vue'
 
     export default {

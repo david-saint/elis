@@ -6,7 +6,7 @@
         <div class="col s10 border-right hundred no-overflow">
             <div class="row no-margin-bottom">
                 <div class="input-holder col s11">
-                    <input type="text" name="query" placeholder="Talk to Elis" v-model="chatValue" @keyup.enter="submit_query">
+                    <input type="text" name="query" placeholder="Talk to Elis" v-model="chatValue" @keyup.enter="submit_query" autoComplete="off">
                 </div>
                 <div class="col s1">
                     <a href="" class="fix-i"><i class="material-icons grey-text">mic</i></a>
