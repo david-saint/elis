@@ -21,13 +21,13 @@ class BusinessController extends Controller
         //
     } 
 
-    public function search()
+    public function search(Request $request)
     {
         $item = $request->search;
         
         $message = Message::create([
                 'title' => 'Title',
-                'message' => 'Isdev',
+                'message' => $request->search,
                 'user_id' => 2
            ]);
         dd($item);
