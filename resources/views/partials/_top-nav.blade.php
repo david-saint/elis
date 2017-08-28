@@ -3,7 +3,7 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 
         <div class="nav-wrapper">
-            <a href="" class="brand-logo center" style="font-family: Orbitron; color: #E57373;">Eliss</a>
+            <a href="" class="brand-logo center" style="font-family: Orbitron; color: #E57373;">Elis</a>
             <a href="" class="left"><i class="material-icons" style="color: #E57373;">person</i></a>
             <a href="" class="dropdown-button right" data-activates="more_content" data-constrainWidth="false"><i class="material-icons" style="color: #E57373;">more_vert</i></a>
         </div>
