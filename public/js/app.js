@@ -21544,7 +21544,7 @@ var Component = __webpack_require__(4)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\ChatCompose.vue"
+Component.options.__file = "c:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\ChatCompose.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] ChatCompose.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21588,7 +21588,7 @@ var Component = __webpack_require__(4)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\ChatHistory.vue"
+Component.options.__file = "c:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\ChatHistory.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] ChatHistory.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -52592,7 +52592,7 @@ var Component = __webpack_require__(4)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\Chat.vue"
+Component.options.__file = "c:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\Chat.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Chat.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -52756,7 +52756,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -52862,7 +52862,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         commit_to_db: function commit_to_db() {
             axios.post('/search', {
-                search: this.my_response.content
+                search: this.my_response.content,
+                item: this.item
             });
         }
     },
@@ -53429,7 +53430,7 @@ var Component = __webpack_require__(4)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\Init.vue"
+Component.options.__file = "c:\\wamp64\\www\\elis\\resources\\assets\\js\\components\\Init.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Init.vue: functional components are not supported with templates, they should use render functions.")}
 
