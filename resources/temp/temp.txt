@@ -1,0 +1,178 @@
+<!! Style.css[107] !!>
+/*
+.chat-message-e:before {
+    left: -5px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #f5f5f5;
+    border-bottom: 5px solid transparent;
+}
+.chat-message-me:before {
+    right: -5px;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #f5f5f5;
+    border-bottom: 5px solid transparent;
+}
+.chat-message-e:before, .chat-message-me:before {
+    content: "";
+    position: absolute;
+    top: calc(100% - 12px);
+}*/
+<!! end[107] !!>
+
+.explore-section {
+    position: relative;
+    max-height: 100%;
+    font-size: 16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.mobile-explore-section {
+    z-index: 995;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 0%;
+    height: calc(100% - 56px);
+    background-color: #fff;
+    transition: all .3s linear;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+
+.product-view {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+}
+
+
+
+<div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-red-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+
+                <div class="explore-section col m6 hide-on-small-only">
+                    <div class="row">
+
+                        <div class="col s12">
+                            <div class="col s2">
+                                <img src="img/team-1.jpg" class="responsive-img circle">
+                            </div>
+                            <div class="col s10">
+                                <div class="row">
+                                    Product name is building smart apps for the future!
+                                </div>
+                                <div class="row">
+                                    <img src="img/2.jpg" class="responsive-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s11 offset-s2 divider"></div>
+
+                        <div class="col s12">
+                            <div class="col s2">
+                                <img src="img/team-1.jpg" class="responsive-img circle">
+                            </div>
+                            <div class="col s10">
+                                <p class="flow-text">
+                                    <b>Ada</b> Rated  <b>Google sandals</b> 5 stars
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col s11 offset-s2 divider"></div>
+
+                        <div class="col s12">
+                            <div class="col s2">
+                                <img src="img/team-1.jpg" class="responsive-img circle">
+                            </div>
+                            <div class="col s10">
+                                <div class="row">
+                                    Product name and is
+                                </div>
+                                <div class="row">
+                                    <img src="img/2.jpg" class="responsive-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s11 offset-s2 divider"></div>
+                    </div>
+                </div>
+
+                <div class="mobile-explore-section">
+                    <div class="row">
+                        <div class="col s11 offset-s1">
+                            <a class="fix-i cancel-explore"><i class="material-icons">keyboard_backspace</i></a>
+                        </div>
+                    </div>
+                    <br>
+                    <h5 class="center">Explore</h5>
+                    <br>
+                    <div class="container-90">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="col s2">
+                                    <img src="img/team-1.jpg" class="responsive-img circle">
+                                </div>
+                                <div class="col s10">
+                                    <div class="row">
+                                        Product name and is
+                                    </div>
+                                    <div class="row">
+                                        <img src="img/2.jpg" class="responsive-img">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s11 offset-s2 divider"></div>
+
+                            <div class="col s12">
+                                <div class="col s2">
+                                    <img src="img/team-1.jpg" class="responsive-img circle">
+                                </div>
+                                <div class="col s10">
+                                    <p class="flow-text">
+                                        <b>Ada</b> Rated  <b>Google sandals</b> 5 stars
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col s11 offset-s2 divider"></div>
+
+                            <div class="col s12">
+                                <div class="col s2">
+                                    <img src="img/team-1.jpg" class="responsive-img circle">
+                                </div>
+                                <div class="col s10">
+                                    <div class="row">
+                                        Product name and is
+                                    </div>
+                                    <div class="row">
+                                        <img src="img/2.jpg" class="responsive-img">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s11 offset-s2 divider"></div>
+                        </div>
+                    </div>
+                </div>
+  

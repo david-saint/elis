@@ -1,12 +1,12 @@
 <template>
-    <div class="chat-section col s12 m5">
+    <div class="chat-section col s12 m6">
         <chat-history></chat-history>
         <chat-compose></chat-compose>
     </div>
 </template>
 
 <script>
-    let ChatCompose = require('./ChatCompose.vue');
+    import ChatCompose from './ChatCompose.vue'
     import ChatHistory from './ChatHistory.vue'
 
     export default {

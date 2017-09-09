@@ -34,17 +34,23 @@
         },
         methods: {
             submit_query(){
-                this.my_response = {
-                    id: this.$store.getters.get_messages.length,
-                    content: this.chatValue,
-                    fromElis: false,
-                    type: 'message'
-                };
-                if(this.$store.getters.user_bool){
+                if (this.chatValue !== '') {
+                    this.my_response = {
+                        id: this.$store.getters.get_messages.length,
+                        content: this.chatValue,
+                        fromElis: false,
+                        type: 'message'
+                    };
+                    if(this.$store.getters.user_bool){
+                        this.send(this.$store.getters.get_messages);
+                    }
                     this.send(this.$store.getters.get_messages);
+                    this.chatValue = '';
                 }
-                this.send(this.$store.getters.get_messages);
-                this.chatValue = '';
+                else {
+                    Materialize.toast("You must enter something", 3000)
+                }
+                
             },
             send(msg) {
                 this.commit_query();

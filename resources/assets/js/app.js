@@ -21,7 +21,7 @@ Vue.component('chat-history', require('./components/ChatHistory.vue'));
 Vue.component('chat-compose', require('./components/ChatCompose.vue'));
 
 
-import { store } from './store'
+import { store } from './store/store'
 
 const app = new Vue({
     el: '#app',
