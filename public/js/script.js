@@ -1,14 +1,1 @@
-$(document).ready(function(){
-	$('.carousel').carousel({
-		noWrap: false
-	});
-
-
-	$('.explore-btn').on('click', function() {
-		$('.mobile-explore-section').css('width', '100%');
-	});
-
-	$('.cancel-explore').on('click', function(){
-		$('.mobile-explore-section').css('width', '0%')
-	});
-});
+$(document).ready(function(){$(".carousel").carousel({noWrap:!1}),$(".ac-btn").on("click",function(){$(this).hasClass("r")?$(this).removeClass("r"):$(this).addClass("r")})});

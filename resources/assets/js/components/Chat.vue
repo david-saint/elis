@@ -19,7 +19,10 @@
             ChatCompose,
             ChatHistory
         },
-        methods: {}
+        methods: {},
+        mounted(){
+            this.$store.commit('set_main_loading');
+        }
     }
 </script>
 

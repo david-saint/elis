@@ -1,11 +1,9 @@
 <div class="navbar-fixed">
     <nav>
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-
         <div class="nav-wrapper">
-            <a href="" class="brand-logo center" style="font-family: Orbitron; color: #E57373;">Elis</a>
-            <a href="" class="left"><i class="material-icons" style="color: #E57373;">person</i></a>
-            <a href="" class="dropdown-button right" data-activates="more_content" data-constrainWidth="false"><i class="material-icons" style="color: #E57373;">more_vert</i></a>
+            <a href="" class="brand-logo center red-text text-lighten-2"><img src="img/e-single.svg" width="20px" height="20px">lis</a>
+            <a href="" class="left"><i class="material-icons">person</i></a>
+            <a href="" class="dropdown-button right" data-activates="more_content" data-constrainWidth="false"><i class="material-icons">more_vert</i></a>
         </div>
     </nav>
     <ul id="more_content" class="dropdown-content">

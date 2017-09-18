@@ -17,13 +17,22 @@ window.Vue = require('vue');
 
 Vue.component('chat', require('./components/Chat.vue'));
 Vue.component('init', require('./components/Init.vue'));
+Vue.component('business', require('./components/Business.vue'));
+Vue.component('preloader', require('./components/Preloader.vue'));
 Vue.component('chat-history', require('./components/ChatHistory.vue'));
 Vue.component('chat-compose', require('./components/ChatCompose.vue'));
+Vue.component('explore', require('./components/ExploreBusinesses.vue'));
+Vue.component('explore-button', require('./components/ExploreButton.vue'));
+Vue.component('navigate-back', require('./components/NavigateBack.vue'));
 
-
-import { store } from './store'
+import { store } from './store/store'
 
 const app = new Vue({
     el: '#app',
-    store
+    store,
+    computed: {
+    	showMainLoader() {
+    		return this.$store.getters.main_loader;
+    	}
+    }
 });

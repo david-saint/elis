@@ -5,16 +5,14 @@
         </div>
         <div class="col s10 border-right hundred no-overflow">
             <div class="row no-margin-bottom">
-                <div class="input-holder col s11">
-                    <input type="text" name="query" placeholder="Talk to Elis" v-model="chatValue" @keyup.enter="submit_query">
-                </div>
-                <div class="col s1">
-                    <a href="" class="fix-i"><i class="material-icons grey-text">mic</i></a>
+                <div class="input-holder col s12">
+                    <input type="text" name="query" placeholder="Talk to Elis" v-model="chatValue" @keyup.enter="submit_query" autoComplete="off">
                 </div>
             </div>
         </div>
         <div class="col s1 hundred">
-            <a href="" class="fix-i" @click.prevent="submit_query"><i class="material-icons">send</i></a>
+            <a v-if="!chatValue" class="fix-i u rotateOut" @click.prevent=""><i class="material-icons">mic</i></a>
+            <a v-else class="fix-i u rotateIn" @click.prevent="submit_query"><i class="material-icons">send</i></a>
         </div>
     </div>
 </template>
@@ -34,17 +32,22 @@
         },
         methods: {
             submit_query(){
-                this.my_response = {
-                    id: this.$store.getters.get_messages.length,
-                    content: this.chatValue,
-                    fromElis: false,
-                    type: 'message'
-                };
-                if(this.$store.getters.user_bool){
+                if (this.chatValue !== '') {
+                    this.my_response = {
+                        id: this.$store.getters.get_messages.length,
+                        content: this.chatValue,
+                        fromElis: false,
+                        type: 'message'
+                    };
+                    if(this.$store.getters.user_bool){
+                        this.send(this.$store.getters.get_messages);
+                    }
                     this.send(this.$store.getters.get_messages);
+                    this.chatValue = '';
                 }
-                this.send(this.$store.getters.get_messages);
-                this.chatValue = '';
+                else {
+                    Materialize.toast("You must enter something", 3000)
+                }  
             },
             send(msg) {
                 this.commit_query();
