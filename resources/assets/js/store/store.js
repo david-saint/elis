@@ -8,6 +8,8 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
     state: {
         auth_user: {},
+        main_loading: true,
+        loading: false,
         chat_details: [
             {id: 1, content:'Hi there, I\'m Elis! Your text buddy.', fromElis: true, type: 'message' },
             {id: 2, content:'I can help you find the products or services you need.', fromElis: true, type: 'message' }
@@ -17,6 +19,9 @@ export const store = new Vuex.Store({
                 {id: 1, content: 'Let\'s get started!', r: 'register'},
                 {id: 2, content: 'I already have an account', r: 'login'}
             ]}
+        ],
+        explore: [
+            {id:21}
         ],
         base_url: 'https://api.api.ai/v1/',
         access_token: '7414f320ad1e4423bff2d76987f9b1b1'

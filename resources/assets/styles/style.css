@@ -1,6 +1,6 @@
 /*Defaukt Styles */
 html{
-	background-color: #fafafa;
+	background-color: #f5f5f5;
 	height: 100%;
 }
 body{
@@ -26,6 +26,22 @@ main {
 	}
 }
 /* end default styles */
+
+/* Begin preloader styles */
+.main-loader {
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1100;
+}
+.spinner-white-only {
+	border-color: #ffffff;
+}
+
+/* end preloader styles */
 
 /*-- Begin nav styles --*/
 nav{
@@ -64,11 +80,11 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
 	border-right: 1px solid #f5f5f5;
 }
 .input-holder input{
-	padding: 0 5px;
-	margin-top: -4px;
+	padding: 0 5px !important;
+	margin-top: -4px !important;
 	display: block;
-	border: 0;
-	height: 45px;
+	border: 0 !important;
+	height: 45px !important;
 }
 .input-holder input:focus {
 	outline: none;
@@ -109,8 +125,11 @@ input.clear-input:focus {
 }
 .fix-i i:hover {
 	color: #757575;
-}.container-90 {
+}
+.container-90 {
 	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 @media only screen and (min-width: 500px) {
 	.container{ 
@@ -126,10 +145,11 @@ input.clear-input:focus {
 div#app {
 	height: 100%;
 }
-    .d                        { animation-delay:0.5s; -moz-animation-delay:0.5s; -webkit-animation-delay:0.5s;}
-    .dg                         { animation-delay:2.2s; -moz-animation-delay:2.2s; -webkit-animation-delay:2.2s; }
-    .dm                         { animation-delay:7.2s; -moz-animation-delay:7.2s; -webkit-animation-delay:7.2s; }
-    .dp                         { animation-delay:12.2s; -moz-animation-delay:12.2s; -webkit-animation-delay:12.2s; }
+    .d 							{animation-delay:0.5s; -moz-animation-delay:0.5s; -webkit-animation-delay:0.5s;}
+    .dg                         {animation-delay:2.2s; -moz-animation-delay:2.2s; -webkit-animation-delay:2.2s; }
+    .dm                         {animation-delay:7.2s; -moz-animation-delay:7.2s; -webkit-animation-delay:7.2s; }
+    .dp                         {animation-delay:12.2s; -moz-animation-delay:12.2s; -webkit-animation-delay:12.2s; }
+    .u 							{animation-duration: .2s; -moz-animation-duration: .2s; -webkit-animation-duration: .2s;cursor: pointer;}
 /*-- End useful styles --*/
 
 /*-- Begin Chat section styles --*/
@@ -193,3 +213,41 @@ div#app {
 	width: auto;
 }
 /*-- End chat section ---*/
+
+/* Begin Explore sections */
+
+.explore-section {
+    position: relative;
+    max-height: 100%;
+    font-size: 16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.mobile-explore-section {
+    z-index: 995;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 0%;
+    height: calc(100% - 56px);
+    background-color: #fafafa;
+    transition: all .2s linear;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ac-btn {
+	height: 100%;
+	color: #616161;
+	border-radius: 0px;
+	border-right: 1px solid #eeeeee;
+}
+.ac-btn i {
+	font-size: 1.5rem;
+	line-height: 1.7;
+}
+
+
+/* End Explore sections */

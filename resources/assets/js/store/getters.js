@@ -14,6 +14,9 @@ export default {
 			return name[0]
 		}
 	},
+	main_loader(state){
+		return state.main_loading;
+	},
 	get_messages(state) {
 		return state.chat_details;
 	},

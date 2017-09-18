@@ -4,5 +4,8 @@ export default {
 	},
 	add_chat_details(state, chat) {
 		state.chat_details.push(chat);
+	},
+	set_main_loading(state){
+		state.main_loading = false;
 	}
 }

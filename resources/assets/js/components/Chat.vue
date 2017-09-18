@@ -1,5 +1,5 @@
 <template>
-    <div class="chat-section col s12 m6">
+    <div class="chat-section col s12 m5">
         <chat-history></chat-history>
         <chat-compose></chat-compose>
     </div>
@@ -19,7 +19,10 @@
             ChatCompose,
             ChatHistory
         },
-        methods: {}
+        methods: {},
+        mounted(){
+            this.$store.commit('set_main_loading');
+        }
     }
 </script>
 
