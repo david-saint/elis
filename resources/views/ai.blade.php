@@ -100,7 +100,7 @@
         error: function() {
           setResponse("Internal Server Error");
         }
-      });
+     dd
       setResponse("Loading...");
     }
     //insert

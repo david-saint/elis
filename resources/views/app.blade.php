@@ -53,7 +53,7 @@
                             </div>
                             <div class="col s10">
                                 <p class="flow-text">
-                                    <b>Ada</b> Rated  <b>Google sandals</b> 5 stars
+                                    <b>Ada</b> Rated  <b>Google sandals</b> 5 starss
                                 </p>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="col s10">
                                     <div class="row">
-                                        Product name and is
+                                        Product name and is g
                                     </div>
                                     <div class="row">
                                         <img src="img/2.jpg" class="responsive-img">
