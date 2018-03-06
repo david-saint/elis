@@ -49,6 +49,7 @@
                 <explore-button></explore-button>
                 <chat></chat>
 
+<<<<<<< HEAD
                 <div class="explore-section col m7 hide-on-small-only">
                     <div class="row">
 
@@ -96,18 +97,18 @@
                         </div>
 
                         <div class="col s11 offset-s2 divider"></div>
-
+=======
                 <div class="explore-section col m6 offset-m1 hide-on-small-only">
                     <div class="container-90">
                         <explore></explore>
-
+>>>>>>> 1818b2cf2510b15c996e4e29aa562adf09a374ad
                     </div>
                 </div>
 
                 <div class="mobile-explore-section">
                     <navigate-back></navigate-back>
                     <br>
-
+<<<<<<< HEAD
                     <h5 class="center">Explore</h5>
                     <br>
                     <div class="container-90">
@@ -162,9 +163,9 @@
 
                 <div class="product-view">
 
-
+=======
                     <explore></explore>
-
+>>>>>>> 1818b2cf2510b15c996e4e29aa562adf09a374ad
                 </div>
             </div>
         </div>

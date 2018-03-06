@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="theme-color" content="#e57373">
+    <meta name="theme-color" content="#e3f2fd">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -17,36 +17,15 @@
 <body>
 <div id="app">
     <init></init>
-    <div v-if="showMainLoader" class="main-loader valign-wrapper red lighten-2">
-        <div class="row">
-            <div class="col s6 m4 offset-s3 offset-m4">
-                <img src="img/e-single-white.svg" class="responsive-img center">
-            </div>
-            <div class="col s12 center">
-                <br><br>
-                <div class="preloader-wrapper small active">
-                    <div class="spinner-layer spinner-white-only">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-    </div>
     <header>
         @include('partials._top-nav')
     </header>
     <main>
         <div class="container no-padding-bottom hundred">
             <div class="row hundred no-margin-bottom">
-                <explore-button></explore-button>
+
+                <a class="explore-btn btn btn-floating red lighten-2 pulse hide-on-med-and-up"><i class="material-icons">wifi_tethering</i></a>
+
                 <chat></chat>
 
                 <div class="explore-section col m7 hide-on-small-only">
@@ -74,7 +53,7 @@
                             </div>
                             <div class="col s10">
                                 <p class="flow-text">
-                                    <b>Ada</b> Rated  <b>Google sandals</b> 5 starss
+                                    <b>Ada</b> Rated  <b>Google sandals</b> 5 stars
                                 </p>
                             </div>
                         </div>
@@ -96,18 +75,16 @@
                         </div>
 
                         <div class="col s11 offset-s2 divider"></div>
-
-                <div class="explore-section col m6 offset-m1 hide-on-small-only">
-                    <div class="container-90">
-                        <explore></explore>
-
                     </div>
                 </div>
 
                 <div class="mobile-explore-section">
-                    <navigate-back></navigate-back>
+                    <div class="row">
+                        <div class="col s11 offset-s1">
+                            <a class="fix-i cancel-explore"><i class="material-icons">keyboard_backspace</i></a>
+                        </div>
+                    </div>
                     <br>
-
                     <h5 class="center">Explore</h5>
                     <br>
                     <div class="container-90">
@@ -118,7 +95,7 @@
                                 </div>
                                 <div class="col s10">
                                     <div class="row">
-                                        Product name and is g
+                                        Product name and is
                                     </div>
                                     <div class="row">
                                         <img src="img/2.jpg" class="responsive-img">
@@ -161,9 +138,6 @@
                 </div>
 
                 <div class="product-view">
-
-
-                    <explore></explore>
 
                 </div>
             </div>
